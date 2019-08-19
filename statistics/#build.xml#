@@ -1,0 +1,6 @@
+<project name="statistics" default="">
+  <target name="compile">
+    <mkdir dir="bin"/>
+    <javac srcdir="." destdir="bin"/>
+  </target>
+</project>
