@@ -1,0 +1,8 @@
+<project name="statistics" default="">
+  <property name="build.dir" value="build" />
+  <target name="compile">
+    <mkdir dir="${build.dir}"/>
+    <javac srcdir="." destdir="${build.dir}"
+	   includeantruntime="false"/>
+  </target>
+</project>
