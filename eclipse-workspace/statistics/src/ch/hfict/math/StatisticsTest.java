@@ -2,9 +2,11 @@ package ch.hfict.math;
 
 public class StatisticsTest{
 
+    
+    
     public static void main(String[] args){
         try{
-    Statistics s = new StatisticsImpl(-3);
+    Statistics s = new StatisticsImpl(5);
 	s.addNumber(1.0);
 	s.addNumber(2.0);
 	s.addNumber(3.0);
