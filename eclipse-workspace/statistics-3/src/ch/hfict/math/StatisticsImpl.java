@@ -31,21 +31,29 @@ public class StatisticsImpl implements Statistics{
 
 public int read(BufferedReader r) {
 
-    int from=0;
-    int last=0;
+//  int from=0;
+//   int last=0;
     String line;
     try {
         line = r.readLine();
-        while(last>=0) {
-
-            last = line.indexOf(' ',from);
-            if(last > 0) {
-                numbers.add(Double.valueOf(line.substring(from,last)));
-            }else if(from<line.length()) {
-                numbers.add(Double.valueOf(line.substring(from)));
+        for (String num : line.split(" ")) {
+            if(!num.isEmpty()) {
+            numbers.add(Double.valueOf(num));
             }
-            from = last+1;
         }
+       
+//        while(last>=0) {
+//
+//            last = line.indexOf(' ',from);
+//            if(last > 0) {
+//                numbers.add(Double.valueOf(line.substring(from,last)));
+//            }else if(from<line.length()) {
+//                numbers.add(Double.valueOf(line.substring(from)));
+//            }
+//            from = last+1;        
+//        }
+        
+        
     } catch (IOException e) {
         e.printStackTrace();
     }

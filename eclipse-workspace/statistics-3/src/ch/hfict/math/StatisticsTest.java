@@ -10,9 +10,9 @@ public class StatisticsTest{
     public static void main(String[] args){
         try{
     Statistics s = new StatisticsImpl();
-    
+   
     BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
-    
+    System.out.print("Eingabe mit Leerzeichen: ");
     s.read(r);
     
 	System.out.println("AVERAGE:" + s.getAverange());
