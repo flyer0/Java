@@ -10,12 +10,11 @@ public class StatisticsImpl implements Statistics{
       
       Double dsize = (double) size; //Cast int to Double
       
-    
-    //Exceptions -- show exception if size < 0
+      //Exceptions -- show exception if size < 0
       if(size<0) {
           throw new IllegalArgumentException("size must be > 0");
       }
-    numbers.add(dsize);
+      numbers.add(dsize);
   }
 
   @Override
@@ -26,7 +25,7 @@ public class StatisticsImpl implements Statistics{
   @Override
   public double getAverange() {
       double sum = 0;
-      for(Double e:numbers ) {
+      for(Double e:numbers ) { //Extended For-Loop
           
           sum +=e;
          
