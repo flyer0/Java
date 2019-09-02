@@ -41,13 +41,15 @@ public int read(BufferedReader r) {
             last = line.indexOf(' ',from);
             if(last > 0) {
                 numbers.add(Double.valueOf(line.substring(from,last)));
+            }else if(from<line.length()) {
+                numbers.add(Double.valueOf(line.substring(from)));
             }
             from = last+1;
         }
     } catch (IOException e) {
         e.printStackTrace();
     }
-    return from;
+    return 0;
 
 }
   
