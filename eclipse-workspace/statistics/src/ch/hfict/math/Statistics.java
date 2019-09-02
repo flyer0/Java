@@ -1,9 +1,24 @@
 package ch.hfict.math;
 
-public interface Statistics {
+public class Statistics{
+  private double[] numbers = null;
+  private int last = 0;
 
-    void addNumber(double n);
+  public Statistics(int size) {
+    numbers = new double[size];
+  }
 
-    double getAverange();
+  public void addNumber(double n) {
+    numbers[last++] = n;
+  }
+  
+  public double getAverange() {
+      double sum = 0;
+      for(int i=0;i<last;i++) {
+          sum +=numbers[i];
+      }
+      return sum/last;
+  }
+
 
 }
