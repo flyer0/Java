@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
 Ant-Version: Apache Ant 1.10.5
-Created-By: 11.0.4+11-post-Ubuntu-1ubuntu219.04 (Ubuntu)
+Created-By: 13+13-Ubuntu-0ubunt1 (Ubuntu)
 Main-Class: ch.hfict.math.StatisticsTest
 

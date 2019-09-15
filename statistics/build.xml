@@ -25,4 +25,7 @@
     <echo message="Hello, today is: ${DSTAMP}"/>
   </target>
 
+  <target name="all" depends="compile,archive,create-manifest,hello">
+  </target>
+
 </project>

@@ -5,5 +5,5 @@ public interface Statistics {
     void addNumber(double n);
 
     double getAverange();
-
+ 
 }

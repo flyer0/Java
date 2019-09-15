@@ -9,7 +9,7 @@ public class StatisticsImpl implements Statistics{
   public StatisticsImpl(int size) {
       
       Double dsize = (double) size; //Cast int to Double
-      
+
       //Exceptions -- show exception if size < 0
       if(size<0) {
           throw new IllegalArgumentException("size must be > 0");
@@ -34,6 +34,7 @@ public class StatisticsImpl implements Statistics{
 
 
   }
+  
 
 
 }
