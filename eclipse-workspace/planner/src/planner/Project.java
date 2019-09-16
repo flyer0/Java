@@ -18,10 +18,14 @@ public class Project {
             
             for(Task e:tasks) {
                 System.out.print(e.descritpion);
+                f.write(e.descritpion);
                 System.out.print(";");
+                f.write(";");
                 System.out.println(e.duration);
+                f.write(String.valueOf(e.duration));
+                f.newLine();
             }
-            
+            f.close();
             
         }catch(IOException e) {
             e.printStackTrace();

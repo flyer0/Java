@@ -7,12 +7,11 @@ public class Planner {
     static Date startDate;
     static Date endDate;
     
-    public static void main(String [] args) throws InterruptedException {
+    public static void main(String [] args) {
         setStartDate();
 
         System.out.println("This is the start Date: " + startDate);
     
-        
         
         Task task1 = new Task("Aufgabe1",20);
         Project p = new Project();
@@ -30,7 +29,7 @@ public class Planner {
         startDate = new Date();
     }
     
-    public static void setEndDate() throws InterruptedException{
+    public static void setEndDate(){
         //TimeUnit.SECONDS.sleep(5); // Test if the Date is different than the start Date.
         endDate = new Date();
    

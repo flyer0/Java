@@ -1,0 +1,2 @@
+Aufgabe1;20
+Aufgabe2;10
