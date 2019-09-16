@@ -18,6 +18,6 @@ public class javafx extends Application {
     stage.show();
   }
   public static void main(String[] args) {
-    launch(args);
-  }
+      launch(args);
+    }
 }
