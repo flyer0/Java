@@ -24,13 +24,10 @@ public class MainDialog extends Application{
         statistics.read(in);
         TextField txt_1 = new TextField();
         Button calc_btn = new Button("Calculate");
-        calc_btn.setOnAction(new EventHandler<ActionEvent>()
+        calc_btn.setOnAction(new EventHandler<ActionEvent>() {
                 public void handle(ActionEvent e) {
                 txt_1.setText(Double.toString(statistics.getAverange()));
-        }
-                
-                
-                );
+        }});
         
         
         
@@ -40,6 +37,7 @@ public class MainDialog extends Application{
         
         StackPane root = new StackPane();
         root.getChildren().add(txt_1);
+        root.getChildren().add(calc_btn);
 
         stage.setScene(new Scene(root, 300, 150));
         stage.setTitle("Statistic Calculation");
