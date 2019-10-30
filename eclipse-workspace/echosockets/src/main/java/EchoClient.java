@@ -13,8 +13,7 @@ public class EchoClient {
 
 		echoSocket = new Socket("localhost", 9001);
 		out = new PrintWriter(echoSocket.getOutputStream(), true);
-		in = new BufferedReader(new InputStreamReader(echoSocket
-				.getInputStream()));
+		in = new BufferedReader(new InputStreamReader(echoSocket.getInputStream()));
 
 		BufferedReader stdIn = new BufferedReader(
 					new InputStreamReader(System.in));

@@ -10,12 +10,15 @@ import org.xml.sax.helpers.DefaultHandler;
 
 class POHandler extends DefaultHandler {
   StringBuffer buf = null;
+  static int cnt = 0;
   Double total = 0.0;
   public void startElement(String uri, String name,
-                           String qName, Attributes attrs) {
-      if(qName.equals("po:price")) {
+                           String element, Attributes attrs) {
+      
+      if(element.equals("po:td")) {
           buf = new StringBuffer();
-          
+          cnt++;
+          System.out.println("tes");
           
       }
   }
@@ -50,6 +53,7 @@ public static void main (String args[])
    for (int i = 0; i < args.length; i++) {
       saxParser.parse( new File(args[i]), handler );
       System.out.println(args[i]+" Total " + handler.getTotal());
+      System.out.println(cnt);
    }
  }
 
