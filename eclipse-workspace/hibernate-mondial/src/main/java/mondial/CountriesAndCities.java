@@ -14,7 +14,7 @@ class CountriesAndCities {
     SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 	Session session = sessionFactory.openSession();
 	Transaction tx = session.beginTransaction();
-	Query query = session.createQuery( "from Country" );
+	Query query = session.createQuery( "from Country where name like 'S%' order by name" );
 	
 	List<Country> countries = query.list();
 	
