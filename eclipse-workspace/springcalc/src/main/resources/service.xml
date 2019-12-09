@@ -9,7 +9,7 @@
 
   <bean id="numbers"
 	class="example.NumberArray">
-    <property name="data"> 
+    <property name="numbers"> 
     	<list>
           <value>1</value>
           <value>2</value>
