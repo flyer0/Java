@@ -12,27 +12,26 @@
       org.postgresql.Driver
     </property>
     <property name="connection.url">
-      jdbc:postgresql://172.17.0.2:5432/Mondial
+      jdbc:postgresql://172.17.0.2/Mondial
     </property>
     <property name="connection.username">postgres</property>
-    <property name="connection.password">test</property>
+    <property name="connection.password">EiThai0j</property>
     
     <!-- JDBC connection pool (use the built-in) -->
     <property name="connection.pool_size">1</property>
 	<property name="show_sql">true</property>
-    <!-- SQL dialect (Bei Postgres gibt es nur einen Dialect)
+    <!-- SQL dialect 
     <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
-	-->
+   -->
     <!-- Enable Hibernate's automatic session context management -->
     <property name="current_session_context_class">thread</property>
 
     <!-- Disable the second-level cache  -->
     <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
     
-    
     <mapping resource="mondial/Country.hbm.xml"/>
     <mapping resource="mondial/City.hbm.xml"/>
-
+    
   </session-factory>
   
 </hibernate-configuration>

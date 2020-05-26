@@ -22,7 +22,8 @@ public class Countries{
 	    con = DriverManager.getConnection( url, "postgres", "test" );
 	    stmt = con.prepareStatement(
 		"SELECT code, name FROM country WHERE name like ?" );
-	    stmt.setString( 1, "S%" );
+	    stmt.setString( 1, "coutry" );
+	    stmt.setString( 2, "S%" );
 
 	    rSet = stmt.executeQuery( );
 	    

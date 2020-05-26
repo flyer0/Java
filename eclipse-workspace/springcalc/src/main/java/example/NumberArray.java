@@ -13,7 +13,7 @@ public class NumberArray implements Iterable<Double> {
 	 * adds a collection of double numbers
 	 * @param c collection of double numbers to be added
 	 */
-	public void setData( List<Double> c ) {
+	public void setNumbers( List<Double> c ) {
 		numbers.addAll( c );
 	}
 	public Iterator<Double> iterator() {

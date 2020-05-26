@@ -1,0 +1,53 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>addressbook</artifactId>
+	<groupId>ch.hfict</groupId>
+	<packaging>jar</packaging>
+	<version>1.0-SNAPSHOT</version>
+
+	<properties>
+		<java.release>11</java.release>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+		<!--  java.lang.NoClassDefFoundError: 
+		           org/apache/maven/doxia/siterenderer/DocumentContent -->
+				<plugin>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>3.7.1</version>
+				</plugin>
+				
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					</configuration>
+					<version>3.8.1</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<reporting>
+		<plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <version>3.1.1</version>
+        <configuration>
+          <configLocation>google_checks.xml</configLocation>
+        </configuration>
+      </plugin>
+		</plugins>
+	</reporting>
+
+
+</project>

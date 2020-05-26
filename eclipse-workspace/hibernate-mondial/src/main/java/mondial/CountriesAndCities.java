@@ -14,16 +14,18 @@ class CountriesAndCities {
     SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 	Session session = sessionFactory.openSession();
 	Transaction tx = session.beginTransaction();
-	Query query = session.createQuery( "from Country where name like 'S%' order by name" );
+	Query query = session.createQuery( 
+	    "from Country where name like 'S%' order by name" );
 	
 	List<Country> countries = query.list();
 	
 	for( Country c: countries){
 		System.out.format( "%-40s %-20s%n", c.getName(), c.getCapital());
 		System.out.print("  Cities: ");
-		/*for( City city: c.getCities()){
+		
+		for( City city: c.getCities()){
 			System.out.format( "%s ", city.getId().getName());			
-		}*/
+		} 
 		System.out.println();
 	} 
 	tx.commit();

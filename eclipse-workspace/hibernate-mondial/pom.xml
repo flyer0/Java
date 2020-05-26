@@ -14,16 +14,16 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    
+    <!--
     <jdbc.groupId>org.postgresql</jdbc.groupId>
     <jdbc.artifactId>postgresql</jdbc.artifactId>
     <jdbc.version>42.1.4</jdbc.version>
-   
-    <!--
+    -->
+    
     <jdbc.groupId>org.mariadb.jdbc</jdbc.groupId>
     <jdbc.artifactId>mariadb-java-client</jdbc.artifactId>
     <jdbc.version>2.2.0</jdbc.version>
-    -->
+     
   </properties>
 
   <dependencies>

@@ -20,7 +20,7 @@
   </bean>
 
   <bean id="calculationService" 
-	class="example.StatisticsService"> 
+	class="example.service.SumService"> 
     <property name="numbers" >
       <ref bean="numbers" />
     </property>
