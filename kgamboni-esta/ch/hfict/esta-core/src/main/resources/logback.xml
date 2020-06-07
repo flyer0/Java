@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+ <property name="LOG_FILE" value="./logs/spring.log}"/>
+	
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>
+				%d{HH:mm:ss.SSS} %logger{36} : %L - %msg%n
+			</Pattern>
+		</layout>
+	</appender>
+	
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<layout class="ch.qos.logback.classic.PatternLayout">
+        	<pattern>%d{HH:mm:ss.SSS} %logger{36} : %L - %msg%n</pattern>
+    	</layout>
+    	<file>${LOG_FILE}</file>
+    	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      		<fileNamePattern>${LOG_FILE}.%d</fileNamePattern>
+    	</rollingPolicy>
+  	</appender>
+
+	<logger name="ch.hfict.esta" level="debug" additivity="false">
+		<appender-ref ref="CONSOLE" />
+	</logger>
+	<!-- Suppress logback self logging -->
+	<statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+	
+		<springProfile name="prod">
+		<root level="WARN">
+			<!-- https://howtodoinjava.com/spring-boot2/logging/profile-specific-logging/ -->
+			<appender-ref ref="FILE" />
+		</root>
+	</springProfile>
+	
+	
+	
+	<springProfile name="dev">
+		<root level="WARN">
+			<!-- https://howtodoinjava.com/spring-boot2/logging/profile-specific-logging/ -->
+			<appender-ref ref="CONSOLE" />
+		</root>
+	</springProfile>
+
+	<springProfile name="test">
+		<root level="WARN">
+			<appender-ref ref="CONSOLE" />
+		</root>
+	</springProfile>
+</configuration>
